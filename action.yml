@@ -1,0 +1,15 @@
+name: 'Post GIF on PR'
+description: 'Posts a GIF on a pull request'
+inputs:
+  github-token:
+    description: 'GitHub token'
+    required: true
+  giphy-api-key:
+    description: 'Giphy API Key to be used'
+    required: true
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+branding:
+  color: 'purple'
+  icon: 'thumbs-up'

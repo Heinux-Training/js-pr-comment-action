@@ -1,0 +1,30 @@
+{
+  "name": "js-pr-comment-action",
+  "version": "1.0.0",
+  "description": "The Custom Action for posting GIF comment on PR",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heinux-Training/custom-actions.git"
+  },
+  "keywords": [
+    "actions",
+    "github",
+    "custom"
+  ],
+  "author": "Hein Htet Win <heinhtetwin386@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Heinux-Training/custom-actions/issues"
+  },
+  "homepage": "https://github.com/Heinux-Training/custom-actions#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "@octokit/rest": "^20.0.1",
+    "giphy-api": "^2.0.2"
+  }
+}
