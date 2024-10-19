@@ -13,6 +13,7 @@ async function run() {
 
     const context = github.context;
     const { owner, repo, number } = context.issue;
+    const prInitiatorUsername = context.payload.pull_request.user.login;
     const prComment = await giphy.random('thank-you');
 
     if (context.payload.pull_request == null) {
@@ -24,7 +25,7 @@ async function run() {
       owner,
       repo,
       issue_number: number,
-      body: `### PR - ${number} \n ### Thank you so much for your contribution! \n ![Giphy](${prComment.data.images.downsized.url})`
+      body: `### PR - ${number} \n ### Thank you so much for your contribution! ${prInitiatorUsername} \n ![Giphy](${prComment.data.images.downsized.url})`
     });
 
     core.setOutput('comment-url', `${prComment.data.images.downsized.url}`);
